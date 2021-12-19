@@ -25,3 +25,36 @@
         margin-left: -25%;
     }
 }
+
+@keyframes pokeCard {
+    10%{
+        background: linear-gradient(36deg, red, transparent, transparent);
+    }
+    20%{
+        background: linear-gradient(72deg, red, transparent, transparent);
+    }
+    30%{
+        background: linear-gradient(108deg, red, transparent, transparent);
+    }
+    40%{
+        background: linear-gradient(144deg, red, transparent, transparent);
+    }
+    50%{
+        background: linear-gradient(180deg, red, transparent, transparent); 
+    }
+    60%{
+        background: linear-gradient(216deg, red, transparent, transparent);
+    }
+    70%{
+        background: linear-gradient(252deg, red, transparent, transparent);
+    }
+    80%{
+        background: linear-gradient(288deg, red, transparent, transparent);
+    }
+    90%{
+        background: linear-gradient(324deg, red, transparent, transparent);
+    }
+    100%{
+        background: linear-gradient(360deg, red, transparent, transparent);
+    }
+}

@@ -1,0 +1,64 @@
+.info {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .img {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+    .stats {
+        width: 60%;
+        text-align: center;
+        span {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .features {
+            display: flex;
+            width: 100%;
+            div {
+                width: 50%;
+                span {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+                span:first-child {
+                    font-weight: bold;
+                }
+            }
+        }
+        .typesP {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            span {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 20px;
+                font-weight: 300;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        .abilities {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            span {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 20px;
+                font-weight: 300;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

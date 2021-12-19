@@ -2,46 +2,61 @@ import React, { useEffect, useState } from 'react';
 import Nav from '../components/nav';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import CardPokemon from '../components/cardPokemon';
 
-const List = (props) => {
+class List extends React.Component {
 
-    let {search} = useLocation();
-    let params = new URLSearchParams(search);
-    let type = params.get('type');
+    state = {
+        pokemons: []
+    }
 
-    const [pokemons, setPokemons] = useState([]);
-    const [pokemon, setPokemon] = useState([]);
+    componentDidMount() {
+        var search = new URLSearchParams(window.location.search);
+        var param = search.get('type');
 
-
-    useEffect(()=>{
-        axios.get('https://pokeapi.co/api/v2/type/'+type)
+        axios.get('https://pokeapi.co/api/v2/type/'+param)
         .then(res=>{
             var pokes = res.data.pokemon;
-            setPokemons(pokes);
-        });
-        const pokems = pokemons.map(o=>{
-                var x=[];
+            pokes.map(o=>{
                 axios.get(o.pokemon.url)
-                .then(res=>{
-                    x=x+res.data;
+                .then(res=>res.data)
+                .then(data=>{
+                    this.setState({
+                        pokemons:[
+                            ...this.state.pokemons,
+                            {data}
+                        ]
+                    })
                 })
-                return x;
-            });
-        
-        
-    })
+            })
+        });
+    }
+    componentWillUnmount() {
+        this.setState({});
+    }
 
-    return(
-        <React.Fragment>
-            <Nav
-                classh = "header-all"
-                classd = "d-flex"
-            />
-            <main>
-                <h1>lista</h1>{type}
-            </main>
-        </React.Fragment>
-    )
+    render(){
+        return(
+            <React.Fragment>
+                <Nav
+                    classh = "header-all"
+                    classd = "d-flex"
+                />
+                <main className=''>
+                    <h1>lista</h1>
+                    <div className='pokeList'>
+                        {this.state.pokemons.map(poke =>(
+                            <CardPokemon
+                                key = {poke.data.name}
+                                name = {poke.data.name}
+                                img = {poke.data.sprites.other.home.front_default}
+                            />
+                        ))}
+                    </div>
+                </main>
+            </React.Fragment>
+        )
+    }
 }
 
 export default List
