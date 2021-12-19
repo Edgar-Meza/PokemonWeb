@@ -1,0 +1,47 @@
+.header-all {
+    height: 60px;
+    padding-bottom: 5px;
+    @include nav(100%, initial, 0, red);
+    .branding-page {
+        img {
+            margin-left: 25%!important;
+        }
+    }
+    .author-page {
+        text-align: center;
+        img {
+            display: none;
+        }
+        span {
+            margin-top: 20px;
+            position: absolute;
+        }
+    }
+    nav {
+        ul {
+            margin-top: 20px;
+        }
+    }
+}
+.header-main {
+    top: 45%;
+    height: 10%;
+    border: 0;
+    border-radius: 40px;
+    overflow: hidden;
+    @include nav(0%, fixed, 5.5%, #FFF);
+    animation-name: menu-main;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    span {
+        display: none;
+    }
+}
+.d-none {
+    display: none;
+}
+.d-flex {
+    display: flex;
+}

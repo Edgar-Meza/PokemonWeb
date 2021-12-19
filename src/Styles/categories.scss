@@ -1,0 +1,32 @@
+.categories {
+    width: 100%;
+    height: auto;
+    h1 {
+        text-align: center;
+    }
+    .types {
+        grid-template-columns: 30% 30% 30%;
+        display: grid;
+        gap: 2%;
+        justify-content: space-around;
+        .type {
+            width: 100%;
+            text-align: center;
+            background-color: red;
+            border-radius: 0px 150px 0px 150px;
+            filter: drop-shadow(2px 4px 6px black);
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: yellow;
+                h2 {
+                    font-size: 40px;
+                    text-transform: capitalize;
+                }
+                img {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}

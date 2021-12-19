@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+import reportWebVitals from './reportWebVitals';
+import RoutesPage from './routes_page/routes_page';
+import './Styles/style.scss';
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Nav />
+//   </React.StrictMode>,
+//   document.getElementById('header')
+// );
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RoutesPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
