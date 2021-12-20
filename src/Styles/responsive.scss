@@ -1,0 +1,28 @@
+@media (max-width: 576px) {
+    .header-main {
+        animation-name: menu-main-small;
+    }
+}
+@media (max-width: 767px) {
+    .types {
+        grid-template-columns: 40% 40%!important;
+    }
+}
+
+@media (max-width: 576px) {
+    .types {
+        grid-template-columns: 80%!important;
+    }
+    .pokeList {
+        grid-template-columns: 40% 40%!important;
+    }
+    .info {
+        flex-wrap: wrap;
+        .img {
+            width: 100%;
+        }
+        .stats {
+            width: 100%;
+        }
+    }
+}

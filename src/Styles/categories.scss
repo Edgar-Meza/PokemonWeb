@@ -33,6 +33,11 @@
             animation-name: pokeType;
             animation-duration: 1s;
             animation-iteration-count: infinite;
+            a {
+                img {
+                    filter: drop-shadow(2px 4px 6px black);
+                }
+            }
         }
     }
 }

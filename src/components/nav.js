@@ -28,11 +28,7 @@ const Nav = (props) =>{
                 </ul>
             </nav>
             <div className="author-page">
-                <span>Desarrollada por Edgar Meza</span>
-                <div>
-                    <a href="https://icons8.com">Iconos by Icons8</a>
-                    <a href="https://pixabay.com/es/">Imagenes By Pixabay</a>
-                </div>
+                <Link to="/about">About</Link>
                 <img src="https://img.icons8.com/material-outlined/24/000000/delete-sign.png" onClick={()=>{setClose(!close);props.sta(false)}}/>
             </div>
         </header>

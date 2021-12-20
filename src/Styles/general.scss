@@ -34,4 +34,30 @@ footer {
       }
     }
 }
+
+.about {
+    text-align: center;
+    color: #FFF;
+    div {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50px;
+        padding: 20px;
+        filter: drop-shadow(2px 4px 6px black);
+        h2 {
+          margin-top: 30px;
+        }
+        span {
+          font-size: 20px;
+          margin: 10px;
+        }
+        a {
+          color: #FFF;
+          margin: 10px;
+        }
+    }
+}
   
