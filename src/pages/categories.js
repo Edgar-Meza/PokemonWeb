@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Nav from "../components/nav";
 import { Link, useLocation } from "react-router-dom";
+import Footer from "../components/footer";
 
 const Categories = () =>{
 

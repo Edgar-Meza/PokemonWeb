@@ -1,3 +1,10 @@
+.information {
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+        color: #FFF;
+    }
+}
 .info {
     display: flex;
     width: 80%;
@@ -7,16 +14,30 @@
         width: 40%;
         img {
             width: 100%;
+            background-image: url(https://cdn.pixabay.com/photo/2016/08/02/08/30/pokemon-1562770__340.png);
+            background-size: cover;
+            background-position-x: center;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            border-radius: 50%;
         }
     }
     .stats {
         width: 60%;
         text-align: center;
+        margin-left: 5%;
+        background: rgba(0,0,0,0.5);
+        color: #FFF;
+        padding: 5%;
+        border-radius: 50px;
         span {
             display: block;
             margin-bottom: 15px;
             font-size: 25px;
             font-weight: bold;
+            border-left: 10px solid red;
+            border-right: 10px solid red;
+            border-radius: 50px;
         }
         .features {
             display: flex;
@@ -28,6 +49,7 @@
                     margin-bottom: 5px;
                     font-size: 20px;
                     font-weight: 300;
+                    border: 0;
                 }
                 span:first-child {
                     font-weight: bold;
@@ -45,6 +67,7 @@
                 font-weight: 300;
                 margin-left: 10px;
                 margin-right: 10px;
+                border: 0;
             }
         }
         .abilities {
@@ -58,6 +81,7 @@
                 font-weight: 300;
                 margin-left: 10px;
                 margin-right: 10px;
+                border: 0;
             }
         }
     }

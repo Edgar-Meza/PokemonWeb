@@ -1,6 +1,7 @@
 .categories {
     width: 100%;
     height: auto;
+    color: #FFF;
     h1 {
         text-align: center;
     }
@@ -12,7 +13,7 @@
         .type {
             width: 100%;
             text-align: center;
-            background-color: red;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 51%, rgba(255,0,0,1) 100%);
             border-radius: 0px 150px 0px 150px;
             filter: drop-shadow(2px 4px 6px black);
             cursor: pointer;
@@ -27,6 +28,11 @@
                     width: 75%;
                 }
             }
+        }
+        .type:hover {
+            animation-name: pokeType;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
         }
     }
 }

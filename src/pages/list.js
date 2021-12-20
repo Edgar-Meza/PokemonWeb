@@ -42,8 +42,8 @@ class List extends React.Component {
                     classh = "header-all"
                     classd = "d-flex"
                 />
-                <main className=''>
-                    <h1>lista</h1>
+                <main className='list'>
+                    <h1>lista pokemon</h1>
                     <div className='pokeList'>
                         {this.state.pokemons.map(poke =>(
                             <CardPokemon

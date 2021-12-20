@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Footer from '../components/footer';
 import Nav from '../components/nav';
 
-const Main = () => {
+const Main = (props) => {
 
     const [display, setDisplay] = useState(false);
     const [cls, setCls] = useState(false);
+    const [search, setSearch] = useState(''); 
     
     const Change = (sta) => {
         setDisplay(sta);
         setCls(sta);
+    }
+    const handleSearch = (e) =>{
+        e.preventDefault();
+        setSearch(e.target.value);
     }
 
     return(
@@ -32,11 +39,12 @@ const Main = () => {
                 </div>
                 <div className='white-side'>
                     <form>
-                        <input type='text' name='search' id='search' placeholder='Search pokemon' />
+                        <input type='text' name='search' id='search' placeholder='Buscar pokemon' onChange={handleSearch}/>
+                        <div><Link to={'/information/?pokemon='+search}>buscar</Link></div>
                     </form>
-                    <a href="https://icons8.com/icon/NvAez9zuZg1W/menú">Menú icon by Icons8</a>
                 </div>
             </main>
+            <Footer/>
         </React.Fragment>
     )
 }

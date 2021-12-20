@@ -40,7 +40,7 @@ class Information extends React.Component{
                     classd = 'd-flex'
                 />
                 <main className="information">
-                    <h1>Information</h1>
+                    <h1>{this.state.pokemon.name}</h1>
                     <div className="info">
                         <div className="img">
                             <img src={this.state.imgPoke} alt={this.state.pokemon.name}/>
