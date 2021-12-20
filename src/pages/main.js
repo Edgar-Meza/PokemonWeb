@@ -22,7 +22,7 @@ const Main = (props) => {
         <React.Fragment>
             <main>
                 <div className='red-side'>
-                    <h1>Pokedex</h1>
+                    <h1>PokeWeb</h1>
                 </div>
                 <div className='line'>
                     <div className='circle-main'>
